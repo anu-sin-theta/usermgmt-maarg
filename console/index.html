@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <title>User Management Console</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="pyaari.css">
+
+</head>
+<body>
+    <h1>User Management Console</h1>
+
+    <!-- Search Bar -->
+    <div>
+        <input type="text" id="search" placeholder="Search users...">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- User Table -->
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Users will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <!-- Add User Form -->
+    <div>
+    <h2>Add New User</h2>
+    <form id="addUserForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="phone" placeholder="Phone" required>
+        <input type="text" id="aadhaar" placeholder="Aadhaar" required>
+        <select id="state">
+
+        </select>
+        <input type="text" id="userId" placeholder="User ID" readonly>
+        <button type="submit">Add User</button>
+    </form>
+</div>
+<script src="connect.js"></script>
+</body>
+</html>

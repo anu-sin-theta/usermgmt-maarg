@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#searchBtn, #addUserForm button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchBtn:hover, #addUserForm button:hover {
+    background-color: #0056b3;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#userTable th, #userTable td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#userTable th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#addUserForm {
+    margin-top: 20px;
+}
+
+#addUserForm input, #addUserForm select {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#addUserForm button {
+    width: 100%;
+}
+
