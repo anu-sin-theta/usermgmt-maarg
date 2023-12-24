@@ -12,13 +12,11 @@
 <body>
     <h1>User Management Console</h1>
 
-    <!-- Search Bar -->
     <div>
         <input type="text" id="search" placeholder="Search users...">
         <button id="searchBtn">Search</button>
     </div>
 
-    <!-- User Table -->
     <table id="userTable">
         <thead>
             <tr>
@@ -29,24 +27,28 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Users will be dynamically inserted here -->
         </tbody>
     </table>
 
-    <!-- Add User Form -->
     <div>
     <h2>Add New User</h2>
-    <form id="addUserForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="text" id="phone" placeholder="Phone" required>
-        <input type="text" id="aadhaar" placeholder="Aadhaar" required>
-        <select id="state">
-
-        </select>
-        <input type="text" id="userId" placeholder="User ID" readonly>
-        <button type="submit">Add User</button>
-    </form>
+<form id="addUserForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="phone" placeholder="Phone" required>
+    <input type="text" id="aadhaar" placeholder="Aadhaar" required>
+    <select id="state">
+        <!-- Add options for each state here -->
+    </select>
+    <select id="city">
+        <!-- The options for this dropdown will be populated based on the selected state -->
+    </select>
+    <input type="text" id="userId" placeholder="User ID" readonly>
+    <button type="submit">Add User</button>
+</form>
+<div id="searchResults"></div>
 </div>
 <script src="connect.js"></script>
 </body>
+<footer>
+    <p>cc 2023 Mymaarg :)</p>
 </html>

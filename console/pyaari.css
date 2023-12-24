@@ -1,16 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #222;
+    color: #fff;
 }
 
 h1, h2 {
-    color: #333;
+    color: #ff69b4;
+    text-align: center;
 }
 
 #searchBtn, #addUserForm button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #800080; /* Purple color for buttons */
     color: white;
     border: none;
     border-radius: 5px;
@@ -18,7 +20,7 @@ h1, h2 {
 }
 
 #searchBtn:hover, #addUserForm button:hover {
-    background-color: #0056b3;
+    background-color: #ff69b4; /* Hot pink color for hovered buttons */
 }
 
 #userTable {
@@ -33,11 +35,15 @@ h1, h2 {
 }
 
 #userTable th {
-    background-color: #007BFF;
+    background-color: #800080; /* Purple color for table headers */
     color: white;
 }
 
 #addUserForm {
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -51,3 +57,45 @@ h1, h2 {
     width: 100%;
 }
 
+#searchResults {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #333; /* Darker background for search results */
+}
+
+#searchResults table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#searchResults th, #searchResults td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#search {
+    padding: 0px;
+    border-radius: 5px;
+    height: 25px;
+}
+#searchResults th {
+    background-color: #800080;
+    color: white;
+}
+/* Style for the delete button */
+.deleteBtn {
+    padding: 5px 10px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+    padding: 10px;
+}
