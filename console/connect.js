@@ -19,11 +19,11 @@ document.getElementById('phone').addEventListener('blur', generateUserId);
 document.getElementById('aadhaar').addEventListener('blur', generateUserId);
 
 function generateUserId() {
-    var phone = document.getElementById('phone').value;
-    var aadhaar = document.getElementById('aadhaar').value;
+    var phone = Number(document.getElementById('phone').value);
+    var aadhaar = Number(document.getElementById('aadhaar').value);
 
-    if (phone.length >= 4 && aadhaar.length >= 8) {
-        var userId = phone.substring(0, 4) + aadhaar.substring(4, 8);
+    if (phone.toString().length >= 4 && aadhaar.toString().length >= 8) {
+        var userId = Number(phone.toString().substring(0, 4) + aadhaar.toString().substring(4, 8));
         document.getElementById('userId').value = userId;
     }
 }
@@ -31,16 +31,16 @@ function generateUserId() {
 document.getElementById('addUserForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
-    var phone = document.getElementById('phone').value;
-    var aadhaar = document.getElementById('aadhaar').value;
+    var phone = Number(document.getElementById('phone').value);
+    var aadhaar = Number(document.getElementById('aadhaar').value);
     var name = document.getElementById('name').value;
-    if (phone.length !== 10) {
+    if (phone.toString().length !== 10) {
         alert('Phone number must be exactly 10 digits.');
         return;
     }
 
     // Check if Aadhaar number is exactly 12 digits
-    if (aadhaar.length !== 12) {
+    if (aadhaar.toString().length !== 12) {
         alert('Aadhaar number must be exactly 12 digits.');
         return;
     }
@@ -67,11 +67,11 @@ document.getElementById('addUserForm').addEventListener('submit', function (even
             var newUserRef = usersCollection.push(); // Create a reference to a new user document
 
             newUserRef.set({
-                name: document.getElementById('name').value,
+                name: name,
                 phone: phone,
                 aadhaar: aadhaar,
                 state: document.getElementById('state').value,
-                userId: document.getElementById('userId').value
+                userId: Number(document.getElementById('userId').value)
                 // other fields...
             })
             .then(() => {
